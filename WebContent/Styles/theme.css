@@ -1,7 +1,3 @@
-body {
-  background-color: red;
-}
-
 .flex-pane {
   --flex-pane-order: 0;
   --flex-pane-growth: 0;
@@ -44,6 +40,10 @@ body {
 
 @media (orientation: portrait) {
   .flex-container {
-    --flex-height: 98vh;
+    --flex-container-height: 98vh;
   }
+}
+
+body {
+  background-color: red;
 }
