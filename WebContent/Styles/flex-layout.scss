@@ -1,4 +1,4 @@
-.flex-pane{
+%flex-pane{
 	--flex-pane-order: 0;
 	--flex-pane-growth: 0;
 	--flex-pane-shrink: 1;
@@ -13,7 +13,7 @@
 	align-self: var(--flex-pane-align-self);
 }
 
-.flex-container{
+%flex-container{
 	display: flex;
 	--flex-container-direction: row;
 	--flex-container-wrap: nowrap;
@@ -35,7 +35,7 @@
 }
 
 @media (orientation: portrait){
-	.flex-container{
+	%flex-container{
  		--flex-container-height: 98vh;
 	}
 }

@@ -1,4 +1,4 @@
-.flex-pane {
+.flex-p-test {
   --flex-pane-order: 0;
   --flex-pane-growth: 0;
   --flex-pane-shrink: 1;
@@ -13,7 +13,7 @@
   align-self: var(--flex-pane-align-self);
 }
 
-.flex-container {
+.flex-c-test {
   display: flex;
   --flex-container-direction: row;
   --flex-container-wrap: nowrap;
@@ -35,30 +35,40 @@
 }
 
 @media (orientation: portrait) {
-  .flex-container {
+  .flex-c-test {
     --flex-container-height: 98vh;
   }
 }
-.cssgrid-container {
+.test {
   --cssgrid-container-type: grid;
   --cssgrid-container-height: 100%;
-  --cssgrid-container-weight: 100%;
+  --cssgrid-container-width: 100%;
   --cssgrid-container-columns: repeat(100, 1%);
   --cssgrid-container-rows: repeat(100, 1%);
   --cssgrid-container-template-areas: "";
   --cssgrid-container-column-gap: 0px;
   --cssgrid-container-row-gap: 0px;
+  --cssgrid-container-gap: 0px 0px;
+  --cssgrid-container-justify-items: strech;
+  --cssgrid-container-align-items: strech;
+  --cssgrid-container-justify-content: strech;
+  --cssgrid-container-align-content: strech;
   display: var(--cssgrid-container-type);
   height: var(--cssgrid-container-height);
-  width: var(--cssgrid-container-weight);
+  width: var(--cssgrid-container-width);
   grid-template-columns: var(--cssgrid-container-columns);
   grid-template-rows: var(--cssgrid-container-rows);
   grid-template-areas: var(--cssgrid-container-areas);
+  grid-gap: var(--cssgrid-container-gap) !important;
   grid-column-gap: var(--cssgrid-container-column-gap);
   grid-row-gap: var(--cssgrid-container-row-gap);
+  justify-items: var(--cssgrid-container-justify-items);
+  align-items: var(--cssgrid-container-align-items);
+  justify-content: var(--cssgrid-container-justify-content);
+  align-content: var(--cssgrid-container-align-content);
 }
 
-.cssgrid-element {
+.test1 {
   --cssgrid-element-column-start: auto;
   --cssgrid-element-column-end: auto;
   --cssgrid-element-row-start: auto;
@@ -73,4 +83,16 @@
 
 body {
   background-color: red;
+}
+
+.test {
+  --cssgrid-container-justify-items: center;
+  --cssgrid-container-align-items: end;
+}
+
+.test1 {
+  --cssgrid-element-column-start:1;
+  --cssgrid-element-column-end: 50;
+  --cssgrid-element-row-start: 1;
+  --cssgrid-element-row-end: 50;
 }

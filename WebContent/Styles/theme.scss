@@ -1,9 +1,31 @@
 @import 'theme_variables';
 @import 'flex-layout';
-@import 'css-grid';
+@import 'css-grid';	
 	
 body{
 	background-color: $body-background;
 }
 
+.flex-c-test{
+	@extend %flex-container;
+}
 
+.flex-p-test{
+	@extend %flex-pane;
+}
+
+.test{
+	@extend %cssgrid-container;
+  	--cssgrid-container-justify-items: center;
+ 	--cssgrid-container-align-items: end;
+//	--cssgrid-container-align-content: end;
+	
+}
+
+.test1{
+	@extend %cssgrid-element;
+ 	--cssgrid-element-column-start:1;
+ 	--cssgrid-element-column-end: 50;
+ 	--cssgrid-element-row-start: 1;
+ 	--cssgrid-element-row-end: 50;
+}
