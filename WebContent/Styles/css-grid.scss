@@ -13,10 +13,10 @@
 }
 
 .cssgrid-element{
-	--cssgrid-element-column-start: 1;
-	--cssgrid-element-column-end: 2;
-	--cssgrid-element-row-start: 1;
-	--cssgrid-element-row-end: 2; 
+	--cssgrid-element-column-start: auto;
+	--cssgrid-element-column-end: auto;
+	--cssgrid-element-row-start: auto;
+	--cssgrid-element-row-end: auto; 
  
 	grid-column-start: var(--cssgrid-element-column-start);
 	grid-column-end: var(--cssgrid-element-column-end);
