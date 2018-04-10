@@ -5,14 +5,12 @@
   --flex-pane-basis: auto;
   --flex-pane-align-self: auto;
   --flex-pane-flex: 0 1 auto;
-  --flex-pane-background-color: white;
   order: var(--flex-pane-order);
   flex-grow: var(--flex-pane-growth) !important;
   flex-shrink: var(--flex-pane-shrink) !important;
   flex-basis: var(--flex-pane-basis) !important;
   flex: var(--flex-pane-flex);
   align-self: var(--flex-pane-align-self);
-  background-color: var(--flex-pane-background-color);
 }
 
 .flex-container {
@@ -25,7 +23,6 @@
   --flex-container-align-content: stretch;
   --flex-container-height: 95vh;
   --flex-container-overflow: hidden;
-  --flex-container-background-color: white;
   flex-direction: var(--flex-container-direction) !important;
   flex-wrap: var(--flex-container-wrap) !important;
   flex-flow: var(--flex-container-flow);
@@ -35,13 +32,35 @@
   min-height: var(--flex-container-height);
   max-height: var(--flex-container-height);
   overflow: var(--flex-container-overflow);
-  background-color: var(--flex-container-background-color);
 }
 
 @media (orientation: portrait) {
   .flex-container {
     --flex-container-height: 98vh;
   }
+}
+.cssgrid-container {
+  --cssgrid-container-type: grid;
+  --cssgrid-container-height: 100%;
+  --cssgrid-container-weight: 100%;
+  --cssgrid-container-columns: repeat(100, 1%);
+  --cssgrid-container-rows: repeat(100, 1%);
+  display: var(--cssgrid-container-type);
+  height: var(--cssgrid-container-height);
+  weight: var(--cssgrid-container-weight);
+  grid-template-columns: var(--cssgrid-container-columns);
+  grid-template-rows: var(--cssgrid-container-rows);
+}
+
+.cssgrid-element {
+  --cssgrid-element-column-start: 1;
+  --cssgrid-element-column-end: 2;
+  --cssgrid-element-row-start: 1;
+  --cssgrid-element-row-end: 2;
+  grid-column-start: var(--cssgrid-element-column-start);
+  grid-column-end: var(--cssgrid-element-column-end);
+  grid-row-start: var(--cssgrid-element-row-start);
+  grid-row-end: var(--cssgrid-element-row-end);
 }
 
 body {

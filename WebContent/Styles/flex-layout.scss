@@ -5,14 +5,12 @@
 	--flex-pane-basis: auto;
 	--flex-pane-align-self: auto;
 	--flex-pane-flex: 0 1 auto;
-	--flex-pane-background-color: white;
 	order: var(--flex-pane-order);
 	flex-grow: var(--flex-pane-growth) !important;
   	flex-shrink: var(--flex-pane-shrink) !important;
 	flex-basis: var(--flex-pane-basis) !important;
 	flex: var(--flex-pane-flex);
 	align-self: var(--flex-pane-align-self);
-	background-color: var(--flex-pane-background-color);
 }
 
 .flex-container{
@@ -25,7 +23,6 @@
 	--flex-container-align-content: stretch;
 	--flex-container-height: 95vh;
 	--flex-container-overflow: hidden;
-	--flex-container-background-color: white;
 	flex-direction: var(--flex-container-direction)  !important;
 	flex-wrap: var(--flex-container-wrap)  !important;
 	flex-flow: var(--flex-container-flow);
@@ -35,7 +32,6 @@
  	min-height: var(--flex-container-height);
  	max-height: var(--flex-container-height);
 	overflow: var(--flex-container-overflow);
-  	background-color: var(--flex-container-background-color);
 }
 
 @media (orientation: portrait){

@@ -1,0 +1,25 @@
+.cssgrid-container{
+	--cssgrid-container-type: grid;
+	--cssgrid-container-height: 100%;
+	--cssgrid-container-weight: 100%;	
+	--cssgrid-container-columns: repeat(100, 1%);
+	--cssgrid-container-rows: repeat(100, 1%);
+
+	display: var(--cssgrid-container-type);
+	height: var(--cssgrid-container-height);
+	weight: var(--cssgrid-container-weight);
+	grid-template-columns: var(--cssgrid-container-columns);
+	grid-template-rows: var(--cssgrid-container-rows);	
+}
+
+.cssgrid-element{
+	--cssgrid-element-column-start: 1;
+	--cssgrid-element-column-end: 2;
+	--cssgrid-element-row-start: 1;
+	--cssgrid-element-row-end: 2; 
+ 
+	grid-column-start: var(--cssgrid-element-column-start);
+	grid-column-end: var(--cssgrid-element-column-end);
+	grid-row-start: var(--cssgrid-element-row-start);
+	grid-row-end: var(--cssgrid-element-row-end);
+}
