@@ -4,12 +4,18 @@
 	--cssgrid-container-weight: 100%;	
 	--cssgrid-container-columns: repeat(100, 1%);
 	--cssgrid-container-rows: repeat(100, 1%);
-
+	--cssgrid-container-template-areas: "";
+	--cssgrid-container-column-gap: 0px;
+	--cssgrid-container-row-gap: 0px;
+	
 	display: var(--cssgrid-container-type);
 	height: var(--cssgrid-container-height);
-	weight: var(--cssgrid-container-weight);
+	width: var(--cssgrid-container-weight);
 	grid-template-columns: var(--cssgrid-container-columns);
-	grid-template-rows: var(--cssgrid-container-rows);	
+	grid-template-rows: var(--cssgrid-container-rows);
+	grid-template-areas: var(--cssgrid-container-areas);	
+	grid-column-gap: var(--cssgrid-container-column-gap);
+  	grid-row-gap: var(--cssgrid-container-row-gap);
 }
 
 .cssgrid-element{
@@ -17,9 +23,10 @@
 	--cssgrid-element-column-end: auto;
 	--cssgrid-element-row-start: auto;
 	--cssgrid-element-row-end: auto; 
- 
-	grid-column-start: var(--cssgrid-element-column-start);
-	grid-column-end: var(--cssgrid-element-column-end);
-	grid-row-start: var(--cssgrid-element-row-start);
-	grid-row-end: var(--cssgrid-element-row-end);
+ 	--cssgrid-element-area: "";
+	grid-column-start: var(--cssgrid-element-column-start) !important;
+	grid-column-end: var(--cssgrid-element-column-end) !important;
+	grid-row-start: var(--cssgrid-element-row-start) !important;
+	grid-row-end: var(--cssgrid-element-row-end) !important;
+	grid-area: var(--cssgrid-element-area);
 }
