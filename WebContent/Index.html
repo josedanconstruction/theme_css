@@ -34,12 +34,44 @@
 			<source src="./images/wallpaper_cc.mp4" type="video/mp4"></source>
 		</video>
 	</container>
-			<div class="down-button">
-			<a href="#nutshell-carousel" class="btn">
-				<i class="fas fa-arrow-circle-down fa-4x" style="color: #484848;"></i>
-			</a>
-		</div>
-
+	<downbutton class="down-button">
+		<a href="#nutshell-carousel" class="btn">
+			<i class="fas fa-arrow-circle-down fa-4x" style="color: #484848;"></i>
+		</a>
+	</downbutton>
+	<transition class="transition"></transition>
+	<nutshell id="nutshell-carousel" class="nutshell-container">
+		<nutshellpane class="nutshell-panel">
+			<nutshellcarousel id="nutshell-carousel" class="carousel slide" data-interval="" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#nutshell-carousel" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#nutshell-carousel" data-slide-to="1"></li>
+				</ol>
+				<nutshellcarouselinner class="carousel-inner" role="listbox">
+					<nutshellcarouselslide class="item active">
+						<nutshellcarouselslidecontent class="nutshell-container">
+							<nutshellpane class="nutshell-pane img-responsive" style="background-image: url(./images/source.png); ba">
+								<!-- <div style="background-image: url(./images/source.png)"></div> -->
+							</nutshellpane>
+							<nutshellpane class="nutshell-pane">
+								<div class="content-column">
+									Testing something as simplistic as the source code on the left, turns into something a lot more complex (code to the right)<br><br>
+									It is not difficult to imagine that things do not get easier from here. This ratio of 2:1 is the ratio followed in the defense, aerospace,
+									and other mission critical industries: the budget for testing is twice that of development.
+								</div>
+							</nutshellpane>
+							<nutshellpane class="nutshell-pane" style="background-image: url(./images/tests.png)">
+							</nutshellpane>
+						</nutshellcarouselslidecontent>
+						<nutshellcarouselcaption id="0" class="carousel-caption">
+							<h1>Efforts grow exponentially</h1>
+						</nutshellcarouselcaption>
+					</nutshellcarouselslide>
+				</nutshellcarouselinner>
+			</nutshellcarousel>
+		</nutshellpane>
+	</nutshell>
 </body>
 </html>
 

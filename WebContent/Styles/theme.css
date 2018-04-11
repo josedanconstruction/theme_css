@@ -1,10 +1,29 @@
+.nutshell-pane, .nutshell-panel {
+  display: flex;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.nutshell-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
 .screen-grid {
   display: grid;
   height: 100%;
   width: 100%;
   grid-template-columns: repeat(100, 1%);
   grid-template-rows: repeat(100, 1%);
-  grid-template-areas: "";
   grid-gap: 0px 0px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -24,7 +43,6 @@
   grid-row-start: auto;
   grid-row-end: auto;
   grid-row: auto/auto;
-  grid-area: "";
 }
 
 body {
@@ -32,7 +50,7 @@ body {
 }
 
 .screen-grid {
-  width: calc(100vh * 1.6);
+  width: 100vw;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -51,6 +69,44 @@ body {
   bottom: 10px;
   width: 100%;
   text-align: center;
+}
+
+.nutshell-container {
+  min-height: 50vh;
+  max-height: 50vh;
+  width: 100vw;
+}
+
+.nutshell-panel {
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: #999;
+}
+
+.nutshell-pane {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 33%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #999;
+  background-size: 80%;
+}
+
+.content-column {
+  display: flex;
+  color: white;
+  align-items: center;
+  text-align: justify;
+}
+
+.transition {
+  background: linear-gradient(to bottom, transparent, #999);
+  min-height: 5vh;
+  max-height: 5vh;
+  display: block;
+  width: 100vw;
 }
 
 .navbar-default {
