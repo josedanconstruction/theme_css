@@ -36,11 +36,11 @@
 	</container>
 	<downbutton class="down-button">
 		<a href="#nutshell-carousel" class="btn">
-			<i class="fas fa-arrow-circle-down fa-4x" style="color: #484848;"></i>
+			<i class="fas fa-arrow-circle-down fa-4x"></i>
 		</a>
 	</downbutton>
 	<transition class="transition"></transition>
-	<nutshell id="nutshell-carousel" class="nutshell-container">
+	<nutshell class="nutshell-container">
 		<nutshellpane class="nutshell-panel">
 			<nutshellcarousel id="nutshell-carousel" class="carousel slide" data-interval="" data-ride="carousel">
 				<ol class="carousel-indicators">
@@ -51,9 +51,7 @@
 				<nutshellcarouselinner class="carousel-inner" role="listbox">
 					<nutshellcarouselslide class="item active">
 						<nutshellcarouselslidecontent class="nutshell-container">
-							<nutshellpane class="nutshell-pane img-responsive" style="background-image: url(./images/source.png); ba">
-								<!-- <div style="background-image: url(./images/source.png)"></div> -->
-							</nutshellpane>
+							<nutshellpane class="nutshell-pane img-responsive" style="background-image: url(./images/source.png); ba"></nutshellpane>
 							<nutshellpane class="nutshell-pane">
 								<div class="content-column">
 									Testing something as simplistic as the source code on the left, turns into something a lot more complex (code to the right)<br><br>
@@ -68,10 +66,47 @@
 							<h1>Efforts grow exponentially</h1>
 						</nutshellcarouselcaption>
 					</nutshellcarouselslide>
+					<nutshellcarouselslide class="item">
+						<nutshellcarouselslidecontent class="nutshell-container">
+							<nutshellpane class="nutshell-pane-2">
+								<div class="content-column-2">
+									<img class="img-responsive image-padding" src="./images/nvidia.png"/>
+									<img class="img-responsive image-padding" src="./images/tesla.png"/>
+									<img class="img-responsive image-padding" src="./images/uber.png"/>
+								</div>
+							</nutshellpane>
+							<nutshellpane class="nutshell-pane">
+								<div class="content-column-2">
+									Attempts to deviate from this ratio with the current technology have had real consequences. But not every entity can 
+									afford this kind of investment in a product.<br><br>Traditionally the approach has been to assume that to test code, only
+									more code will do the work, and to use Code Coverage technology to measure the effectiveness of that effort.<br><br>
+									But what about if we could change this approach?										
+								</div>
+							</nutshellpane>
+						</nutshellcarouselslidecontent>
+						<nutshellcarouselcaption id="1" class="carousel-caption">
+							<h1>Until the reckoning hits close...</h1>
+						</nutshellcarouselcaption>
+					</nutshellcarouselslide>
 				</nutshellcarouselinner>
+				<a class="left carousel-control" href="#nutshell-carousel"
+					role="button" data-slide="prev"> <span
+					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#nutshell-carousel"
+					role="button" data-slide="next"> <span
+					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</nutshellcarousel>
 		</nutshellpane>
 	</nutshell>
+	<downbutton class="downbutton-pane down-button-1">
+		<a href="#nutshell-carousel" class="btn">
+			<i class="fas fa-arrow-circle-down fa-4x"></i>
+		</a>
+	</downbutton>
+
 </body>
 </html>
 

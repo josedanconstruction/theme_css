@@ -1,4 +1,4 @@
-.nutshell-pane, .nutshell-panel {
+.nutshell-pane-2, .nutshell-pane, .nutshell-panel {
   display: flex;
   order: 0;
   flex-grow: 0;
@@ -8,7 +8,7 @@
   align-self: auto;
 }
 
-.nutshell-container {
+.downbutton-pane, .nutshell-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -71,9 +71,24 @@ body {
   text-align: center;
 }
 
+.down-button a {
+  color: #484848;
+}
+
+.down-button-1 {
+  width: 100%;
+  text-align: center;
+}
+
+.down-button-1 a {
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .nutshell-container {
-  min-height: 50vh;
-  max-height: 50vh;
+  min-height: 90vh;
+  max-height: 90vh;
   width: 100vw;
 }
 
@@ -94,11 +109,34 @@ body {
   background-size: 80%;
 }
 
-.content-column {
+.nutshell-pane-2 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.downbutton-pane {
+  width: 100vw;
+  background-color: #999;
+}
+
+.content-column, .content-column-2 {
   display: flex;
   color: white;
   align-items: center;
   text-align: justify;
+  font-size: 20px;
+}
+
+.content-column-2 {
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+}
+
+.image-padding {
+  padding-bottom: 10px;
 }
 
 .transition {
@@ -110,7 +148,7 @@ body {
 }
 
 .navbar-default {
-  background: linear-gradient(to bottom, #000, transparent);
+  background: linear-gradient(to bottom, #999, transparent);
 }
 
 .navbar-default .navbar-brand {

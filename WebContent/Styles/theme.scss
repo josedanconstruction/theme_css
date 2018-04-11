@@ -8,8 +8,8 @@ body{
 
 .screen-grid{
 	@extend %cssgrid-container;
-	width: 100vw;
-	height: 100vh;
+	width: $maxWidth;
+	height: $maxHeight;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -30,11 +30,26 @@ body{
 	text-align: center;
 }
 
+.down-button a{
+	color: #484848;
+}
+
+.down-button-1{
+	width: 100%;
+	text-align: center;
+}
+
+.down-button-1 a{
+	color: white;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .nutshell-container{
 	@extend %flex-container;
-	min-height: 50vh;
-	max-height: 50vh;
-	width: 100vw;
+	min-height: $maxHeight * .90;
+	max-height: $maxHeight * .90;
+	width: $maxWidth;
 }
 
 .nutshell-panel{
@@ -42,7 +57,7 @@ body{
 	flex-grow: 1;
 	flex-shrink: 0;
 	justify-content: center;
-	background-color: #999;
+	background-color: $mainColor;
 }
 
 .nutshell-pane{
@@ -52,31 +67,57 @@ body{
 	flex-basis: 33%;
 	background-repeat: no-repeat; 
 	background-position: center;
-	background-color: #999;
+	background-color: $mainColor;
 	background-size: 80%; 
 }
+
+.nutshell-pane-2{
+	@extend %flex-pane;
+	flex-grow: 1;
+	flex-shrink: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.downbutton-pane{
+	@extend %flex-container;
+	width: $maxWidth;
+	background-color: $mainColor;
+}
+
 
 .content-column{
 	display: flex;
 	color: white;
  	align-items:center;
 	text-align: justify;
+	font-size: 20px;
 }
 
+.content-column-2{
+	@extend .content-column;
+	flex-direction: column;
+	justify-content: center;
+	width: 55%;
+}
+
+.image-padding{
+	padding-bottom: 10px;
+}
 
 .transition{
-    background: linear-gradient(to bottom, transparent, #999);
+    background: linear-gradient(to bottom, transparent, $mainColor);
     min-height: 5vh;
     max-height: 5vh;
     display: block;
-    width: 100vw;	
+    width: $maxWidth;	
 }
 
 //BOOTSTRAP
 
 //NAVBAR
 .navbar-default {
-    background: linear-gradient(to bottom, #000, transparent);
+    background: linear-gradient(to bottom, $mainColor, transparent);
 }
 
 .navbar-default .navbar-brand{
