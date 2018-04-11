@@ -14,18 +14,34 @@ body{
 	@extend %flex-pane;
 }
 
-.test{
-	@extend %cssgrid-container;
-  	--cssgrid-container-justify-items: center;
- 	--cssgrid-container-align-items: end;
-//	--cssgrid-container-align-content: end;
-	
+.screen{
+	@extend %flex-container;
 }
 
-.test1{
+.screen-item{
+	@extend %flex-pane;
+}
+
+.screen-grid{
+	@extend %cssgrid-container;
+	width: calc(100vh * 1.6);
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.screen-grid-item{
 	@extend %cssgrid-element;
- 	--cssgrid-element-column-start:1;
- 	--cssgrid-element-column-end: 50;
- 	--cssgrid-element-row-start: 1;
- 	--cssgrid-element-row-end: 50;
+	grid-column-start: 1;
+	grid-column-end: 100;
+	grid-row-start: 1;
+	grid-row-end: 100;
+}
+
+.menu-grid-item{
+	@extend %cssgrid-element;
+	grid-column-start: 1;
+	grid-column-end: 100;
+	grid-row-start: 1;
+	grid-row-end: 10;
 }

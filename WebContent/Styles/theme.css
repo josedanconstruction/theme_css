@@ -1,6 +1,6 @@
-.flex-p-test {
+.screen-item, .flex-p-test {
   --flex-pane-order: 0;
-  --flex-pane-growth: 0;
+  --flex-pane-growth: 1;
   --flex-pane-shrink: 1;
   --flex-pane-basis: auto;
   --flex-pane-align-self: auto;
@@ -13,7 +13,7 @@
   align-self: var(--flex-pane-align-self);
 }
 
-.flex-c-test {
+.screen, .flex-c-test {
   display: flex;
   --flex-container-direction: row;
   --flex-container-wrap: nowrap;
@@ -35,64 +35,60 @@
 }
 
 @media (orientation: portrait) {
-  .flex-c-test {
+  .screen, .flex-c-test {
     --flex-container-height: 98vh;
   }
 }
-.test {
-  --cssgrid-container-type: grid;
-  --cssgrid-container-height: 100%;
-  --cssgrid-container-width: 100%;
-  --cssgrid-container-columns: repeat(100, 1%);
-  --cssgrid-container-rows: repeat(100, 1%);
-  --cssgrid-container-template-areas: "";
-  --cssgrid-container-column-gap: 0px;
-  --cssgrid-container-row-gap: 0px;
-  --cssgrid-container-gap: 0px 0px;
-  --cssgrid-container-justify-items: strech;
-  --cssgrid-container-align-items: strech;
-  --cssgrid-container-justify-content: strech;
-  --cssgrid-container-align-content: strech;
-  display: var(--cssgrid-container-type);
-  height: var(--cssgrid-container-height);
-  width: var(--cssgrid-container-width);
-  grid-template-columns: var(--cssgrid-container-columns);
-  grid-template-rows: var(--cssgrid-container-rows);
-  grid-template-areas: var(--cssgrid-container-areas);
-  grid-gap: var(--cssgrid-container-gap) !important;
-  grid-column-gap: var(--cssgrid-container-column-gap);
-  grid-row-gap: var(--cssgrid-container-row-gap);
-  justify-items: var(--cssgrid-container-justify-items);
-  align-items: var(--cssgrid-container-align-items);
-  justify-content: var(--cssgrid-container-justify-content);
-  align-content: var(--cssgrid-container-align-content);
+.screen-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(100, 1%);
+  grid-template-rows: repeat(100, 1%);
+  grid-template-areas: "";
+  grid-gap: 0px 0px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: stretch;
+  align-content: stretch;
+  grid-auto-columns: 0px;
+  grid-auto-rows: 0px;
+  grid-auto-flow: row;
 }
 
-.test1 {
-  --cssgrid-element-column-start: auto;
-  --cssgrid-element-column-end: auto;
-  --cssgrid-element-row-start: auto;
-  --cssgrid-element-row-end: auto;
-  --cssgrid-element-area: "";
-  grid-column-start: var(--cssgrid-element-column-start) !important;
-  grid-column-end: var(--cssgrid-element-column-end) !important;
-  grid-row-start: var(--cssgrid-element-row-start) !important;
-  grid-row-end: var(--cssgrid-element-row-end) !important;
-  grid-area: var(--cssgrid-element-area);
+.menu-grid-item, .screen-grid-item {
+  grid-column-start: auto;
+  grid-column-end: auto;
+  grid-column: auto/auto;
+  grid-row-start: auto;
+  grid-row-end: auto;
+  grid-row: auto/auto;
+  grid-area: "";
 }
 
 body {
-  background-color: red;
+  background-color: white;
 }
 
-.test {
-  --cssgrid-container-justify-items: center;
-  --cssgrid-container-align-items: end;
+.screen-grid {
+  width: calc(100vh * 1.6);
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.test1 {
-  --cssgrid-element-column-start:1;
-  --cssgrid-element-column-end: 50;
-  --cssgrid-element-row-start: 1;
-  --cssgrid-element-row-end: 50;
+.screen-grid-item {
+  grid-column-start: 1;
+  grid-column-end: 100;
+  grid-row-start: 1;
+  grid-row-end: 100;
+}
+
+.menu-grid-item {
+  grid-column-start: 1;
+  grid-column-end: 100;
+  grid-row-start: 1;
+  grid-row-end: 10;
 }
