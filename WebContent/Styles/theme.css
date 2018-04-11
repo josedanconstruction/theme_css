@@ -1,44 +1,3 @@
-.screen-item, .flex-p-test {
-  --flex-pane-order: 0;
-  --flex-pane-growth: 1;
-  --flex-pane-shrink: 1;
-  --flex-pane-basis: auto;
-  --flex-pane-align-self: auto;
-  --flex-pane-flex: 0 1 auto;
-  order: var(--flex-pane-order);
-  flex-grow: var(--flex-pane-growth) !important;
-  flex-shrink: var(--flex-pane-shrink) !important;
-  flex-basis: var(--flex-pane-basis) !important;
-  flex: var(--flex-pane-flex);
-  align-self: var(--flex-pane-align-self);
-}
-
-.screen, .flex-c-test {
-  display: flex;
-  --flex-container-direction: row;
-  --flex-container-wrap: nowrap;
-  --flex-container-flow: row || nowrap;
-  --flex-container-justify-content: flex-start;
-  --flex-container-align-items: stretch;
-  --flex-container-align-content: stretch;
-  --flex-container-height: 95vh;
-  --flex-container-overflow: hidden;
-  flex-direction: var(--flex-container-direction) !important;
-  flex-wrap: var(--flex-container-wrap) !important;
-  flex-flow: var(--flex-container-flow);
-  justify-content: var(--flex-container-justify-content);
-  align-items: var(--flex-container-align-items);
-  align-content: var(--flex-container-align-content);
-  min-height: var(--flex-container-height);
-  max-height: var(--flex-container-height);
-  overflow: var(--flex-container-overflow);
-}
-
-@media (orientation: portrait) {
-  .screen, .flex-c-test {
-    --flex-container-height: 98vh;
-  }
-}
 .screen-grid {
   display: grid;
   height: 100%;
@@ -58,7 +17,7 @@
   grid-auto-flow: row;
 }
 
-.menu-grid-item, .screen-grid-item {
+.screen-grid-item {
   grid-column-start: auto;
   grid-column-end: auto;
   grid-column: auto/auto;
@@ -84,11 +43,30 @@ body {
   grid-column-end: 100;
   grid-row-start: 1;
   grid-row-end: 100;
+  z-index: 0;
 }
 
-.menu-grid-item {
-  grid-column-start: 1;
-  grid-column-end: 100;
-  grid-row-start: 1;
-  grid-row-end: 10;
+.down-button {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-default {
+  background: linear-gradient(to bottom, #000, transparent);
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar-right {
+    margin-right: 0;
+  }
 }

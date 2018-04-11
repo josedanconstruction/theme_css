@@ -6,22 +6,6 @@ body{
 	background-color: $body-background;
 }
 
-.flex-c-test{
-	@extend %flex-container;
-}
-
-.flex-p-test{
-	@extend %flex-pane;
-}
-
-.screen{
-	@extend %flex-container;
-}
-
-.screen-item{
-	@extend %flex-pane;
-}
-
 .screen-grid{
 	@extend %cssgrid-container;
 	width: calc(100vh * 1.6);
@@ -36,12 +20,33 @@ body{
 	grid-column-end: 100;
 	grid-row-start: 1;
 	grid-row-end: 100;
+	z-index: 0;
 }
 
-.menu-grid-item{
-	@extend %cssgrid-element;
-	grid-column-start: 1;
-	grid-column-end: 100;
-	grid-row-start: 1;
-	grid-row-end: 10;
+.down-button{
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+//BOOTSTRAP
+
+//NAVBAR
+.navbar-default {
+    background: linear-gradient(to bottom, #000, transparent);
+}
+
+.navbar-default .navbar-brand{
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: white;
+}
+
+@media (min-width: 768px){
+	.navbar-right {
+		margin-right: 0;
+	}
 }
