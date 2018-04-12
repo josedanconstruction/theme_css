@@ -1,4 +1,4 @@
-.nutshell-pane-2, .nutshell-pane, .nutshell-panel {
+.nutshell-pane-2, .riot-pane, .nutshell-pane, .nutshell-panel {
   display: flex;
   order: 0;
   flex-grow: 0;
@@ -107,6 +107,13 @@ body {
   background-size: 80%;
 }
 
+.riot-pane {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  align-self: flex-start;
+}
+
 .nutshell-pane-2 {
   flex-grow: 0;
   flex-shrink: 0;
@@ -134,12 +141,11 @@ body {
   width: 75%;
 }
 
-.image-padding {
+.image-padding, .riot-image {
   margin: 20px;
 }
 
 .transition {
-  background: linear-gradient(to bottom, transparent, white);
   min-height: 5vh;
   max-height: 5vh;
   display: block;
@@ -167,6 +173,14 @@ body {
   width: 5%;
   color: #333;
   background-image: none !important;
+}
+
+.carousel-control:hover {
+  color: black;
+}
+
+.carousel-control:focus {
+  color: #999;
 }
 
 .carousel-caption {

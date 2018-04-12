@@ -69,6 +69,15 @@ body{
 	background-size: 80%; 
 }
 
+.riot-pane{
+	@extend %flex-pane;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 25%;
+	align-self: flex-start;
+}
+
+
 .nutshell-pane-2{
 	@extend %flex-pane;
 	flex-grow: 0;
@@ -88,7 +97,6 @@ body{
 
 .content-column{
 	display: flex;
-//	color: white;
  	align-items:center;
 	text-align: justify;
 	font-size: 20px;
@@ -105,13 +113,20 @@ body{
 	margin: 20px;
 }
 
+.riot-image{
+	@extend .image-padding;
+//	height: 25vh;
+//	width: 80%;
+}
+
 .transition{
-    background: linear-gradient(to bottom, transparent, $mainColor);
     min-height: 5vh;
     max-height: 5vh;
     display: block;
     width: $maxWidth;	
 }
+
+
 
 //BOOTSTRAP
 
@@ -142,6 +157,15 @@ body{
 	color: $colorAdjustment;
 	background-image: none !important;
 }
+
+.carousel-control:hover{
+	color: black;
+}
+
+.carousel-control:focus{
+	color: $navBarColor;
+}
+
 
 .carousel-caption{
 	color: $colorAdjustment;
