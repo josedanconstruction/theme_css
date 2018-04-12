@@ -41,8 +41,6 @@ body{
 
 .down-button-1 a{
 	color: white;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 .nutshell-container{
@@ -73,8 +71,9 @@ body{
 
 .nutshell-pane-2{
 	@extend %flex-pane;
-	flex-grow: 1;
-	flex-shrink: 1;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 50%;
 	justify-content: center;
 	align-items: center;
 }
@@ -82,6 +81,7 @@ body{
 .downbutton-pane{
 	@extend %flex-container;
 	width: $maxWidth;
+	justify-content: center;
 	background-color: $mainColor;
 }
 
@@ -98,7 +98,7 @@ body{
 	@extend .content-column;
 	flex-direction: column;
 	justify-content: center;
-	width: 55%;
+	width: 75%;
 }
 
 .image-padding{
@@ -116,6 +116,7 @@ body{
 //BOOTSTRAP
 
 //NAVBAR
+
 .navbar-default {
     background: linear-gradient(to bottom, $mainColor, transparent);
 }
@@ -132,4 +133,11 @@ body{
 	.navbar-right {
 		margin-right: 0;
 	}
+}
+
+//CAROUSEL CONTROL
+
+.carousel-control{
+	width: 5%;
+	background-color: $mainColor;
 }
