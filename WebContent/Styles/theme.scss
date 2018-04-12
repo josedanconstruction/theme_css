@@ -31,7 +31,7 @@ body{
 }
 
 .down-button a{
-	color: #484848;
+	color: $colorAdjustment;
 }
 
 .down-button-1{
@@ -40,7 +40,7 @@ body{
 }
 
 .down-button-1 a{
-	color: white;
+	color: $colorAdjustment;
 }
 
 .nutshell-container{
@@ -88,7 +88,7 @@ body{
 
 .content-column{
 	display: flex;
-	color: white;
+//	color: white;
  	align-items:center;
 	text-align: justify;
 	font-size: 20px;
@@ -102,7 +102,7 @@ body{
 }
 
 .image-padding{
-	padding-bottom: 10px;
+	margin: 20px;
 }
 
 .transition{
@@ -118,7 +118,7 @@ body{
 //NAVBAR
 
 .navbar-default {
-    background: linear-gradient(to bottom, $mainColor, transparent);
+    background: linear-gradient(to bottom, $navBarColor, transparent);
 }
 
 .navbar-default .navbar-brand{
@@ -139,5 +139,10 @@ body{
 
 .carousel-control{
 	width: 5%;
-	background-color: $mainColor;
+	color: $colorAdjustment;
+	background-image: none !important;
+}
+
+.carousel-caption{
+	color: $colorAdjustment;
 }

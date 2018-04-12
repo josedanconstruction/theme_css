@@ -72,7 +72,7 @@ body {
 }
 
 .down-button a {
-  color: #484848;
+  color: #333;
 }
 
 .down-button-1 {
@@ -81,7 +81,7 @@ body {
 }
 
 .down-button-1 a {
-  color: white;
+  color: #333;
 }
 
 .nutshell-container {
@@ -94,7 +94,7 @@ body {
   flex-grow: 1;
   flex-shrink: 0;
   justify-content: center;
-  background-color: #999;
+  background-color: white;
 }
 
 .nutshell-pane {
@@ -103,7 +103,7 @@ body {
   flex-basis: 33%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #999;
+  background-color: white;
   background-size: 80%;
 }
 
@@ -118,12 +118,11 @@ body {
 .downbutton-pane {
   width: 100vw;
   justify-content: center;
-  background-color: #999;
+  background-color: white;
 }
 
 .content-column, .content-column-2 {
   display: flex;
-  color: white;
   align-items: center;
   text-align: justify;
   font-size: 20px;
@@ -136,11 +135,11 @@ body {
 }
 
 .image-padding {
-  padding-bottom: 10px;
+  margin: 20px;
 }
 
 .transition {
-  background: linear-gradient(to bottom, transparent, #999);
+  background: linear-gradient(to bottom, transparent, white);
   min-height: 5vh;
   max-height: 5vh;
   display: block;
@@ -166,5 +165,10 @@ body {
 }
 .carousel-control {
   width: 5%;
-  background-color: #999;
+  color: #333;
+  background-image: none !important;
+}
+
+.carousel-caption {
+  color: #333;
 }
