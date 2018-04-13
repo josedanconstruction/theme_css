@@ -26,12 +26,13 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#nutshell-carousel">Nutshell</a></li>
 				<li><a href="#riot">Riot</a></li>
+				<li>
 			</ul>
 		</div>
 	</nav>
 	<container class="screen-grid" >
-		<video class="screen-grid-item" preload="preload"  id="video" autoplay="autoplay" loop="loop" style="height: 100%">
-			<source src="./images/wallpaper_cc.mp4" type="video/mp4"></source>
+		<video class="screen-grid-item" preload="preload"  id="video" controls="true" autoplay="autoplay" loop="loop" >
+			<source src="./images/easy.mp4" type="video/mp4"></source>
 		</video>
 	</container>
 	<downbutton class="down-button">
@@ -110,7 +111,7 @@
 		</a>
 	</downbutton>
 	<transition class="transition"></transition>		
-	<riotcontainer id="riot" class="nutshell-container">
+	<riotcontainer id="riot" class="riot-container">
 		<riotpane id="easy" class="riot-pane">
 			<div class="content-column-2">
 				<h2>No Coding Required</h2>
@@ -118,19 +119,18 @@
 				With an easy to use UI, even the most cumbersome testing tasks become a matter of point and click. To achieve the same results as above
 				with current technology would require expertise in two or more frameworks, and a sizeable number of lines of code.   
 				</p>
-				
-				<img class="img-thumbnail riot-image" src="./images/easy.png"/>
+				<img class="img-thumbnail riot-image" src="./images/easy.png" onclick="popEasy(event)"/>
 			</div>			
 		</riotpane>
-		<riotpane id="speed" class="riot-pane">
+		<riotpane id="speed" class="riot-pane" >
 			<div class="content-column-2">
 				<h2>Speed</h2>
 				<p>
 					If RIOT helps to increase the growth of tests inputs, its capacity to process them and generate meaningful outputs
-					is unheard of. One million executions in less than 3 seconds. Think about what this can do to your schedules.
+					is unheard of. One million executions in 5 seconds, or less. Think about what this can do to your schedules.
 				</p>
 				
-				<img class="img-thumbnail riot-image" src="./images/speed.png"/>
+				<img class="img-thumbnail riot-image" src="./images/speed.png" onclick="popSpeed(event)"/>
 			</div>			
 		</riotpane>
 		<riotpane id="thorough" class="riot-pane">
@@ -140,17 +140,16 @@
 					Once you feel comfortable with your logic, there is no need to keep on using RIOT manually. Let our unique independent agent take over and generate 
 					100% code coverage. Period. Line, branch, block, method. This guy is smart and fast.
 				</p>				
-				<img class="img-thumbnail riot-image" src="./images/coverage.png"/>
+				<img class="img-thumbnail riot-image" src="./images/coverage.png" onclick="popCoverage(event)"/>
 			</div>			
 		</riotpane>		
-				
 		<riotpane id="easy" class="riot-pane">
 			<div class="content-column-2">
 				<h2>Third Party Support</h2>
 				<p>
 				Out of the box support for: Spring, MySql. The simple and easy workflow remains the same across underlying platforms
 				</p>
-				<img class="img-thumbnail riot-image" src="./images/spring.png"/>
+				<img class="img-thumbnail riot-image" src="./images/spring.png" onclick="popSpring(event)"/>
 			</div>			
 		</riotpane>
 	</riotcontainer>
@@ -159,7 +158,78 @@
 			<i class="fas fa-arrow-circle-up fa-4x"></i>
 		</a>
 	</downbutton>
-	
 </body>
+<div id="modalEasy" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+		<modalgrid class="screen-grid-modal">
+			<video class="screen-grid-item" preload="preload"  controls="true" id="videoEasy" loop="loop">
+				<source src="./images/easy.mp4" type="video/mp4"></source>
+			</video>
+		</modalgrid>	
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="modalSpeed" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+		<modalgrid class="screen-grid-modal">
+			<video class="screen-grid-item" preload="preload"  controls="true" id="videoSpeed" loop="loop">
+				<source src="./images/million.mp4" type="video/mp4"></source>
+			</video>
+		</modalgrid>	
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="modalCoverage" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+		<modalgrid class="screen-grid-modal">
+			<video class="screen-grid-item" preload="preload"  controls="true" id="videoCoverage" loop="loop">
+				<source src="./images/wallpaper_cc.mp4" type="video/mp4"></source>
+			</video>
+		</modalgrid>	
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="modalSpring" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+		<modalgrid class="screen-grid-modal">
+			<video class="screen-grid-item" preload="preload"  controls="true" id="videoSpring" loop="loop">
+				<source src="./images/spring.mp4" type="video/mp4"></source>
+			</video>
+		</modalgrid>	
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 </html>
 
+<script type="text/javascript">
+
+	function popEasy(event){
+		$('#modalEasy').modal('show');		
+	}
+	
+	function popSpeed(event){
+		$('#modalSpeed').modal('show');		
+	}
+
+	function popCoverage(event){
+		$('#modalCoverage').modal('show');		
+	}
+
+	function popSpring(event){
+		$('#modalSpring').modal('show');		
+	}
+</script>

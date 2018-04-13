@@ -8,7 +8,7 @@
   align-self: auto;
 }
 
-.downbutton-pane, .nutshell-container {
+.downbutton-pane, .nutshell-container, .riot-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -18,7 +18,7 @@
   align-content: stretch;
 }
 
-.screen-grid {
+.screen-grid-modal, .screen-grid {
   display: grid;
   height: 100%;
   width: 100%;
@@ -56,6 +56,15 @@ body {
   margin-right: auto;
 }
 
+.screen-grid-modal {
+  width: 96vh;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .screen-grid-item {
   grid-column-start: 1;
   grid-column-end: 100;
@@ -84,10 +93,14 @@ body {
   color: #333;
 }
 
-.nutshell-container {
+.nutshell-container, .riot-container {
   min-height: 90vh;
   max-height: 90vh;
   width: 100vw;
+}
+
+.riot-container {
+  padding-left: 5vw;
 }
 
 .nutshell-panel {
@@ -145,6 +158,10 @@ body {
   margin: 20px;
 }
 
+.riot-image {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
 .transition {
   min-height: 5vh;
   max-height: 5vh;
@@ -185,4 +202,8 @@ body {
 
 .carousel-caption {
   color: #333;
+}
+
+.modal-dialog {
+  width: 100vh;
 }
